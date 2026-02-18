@@ -30,7 +30,7 @@ body{
     @apply bg-[#00ffff] text-[#1c1c1c] border-0 rounded-[30px] px-8 py-4 text-[14px] font-bold cursor-pointer md:scale-100 scale-90 ; 
     
 }
-button, .msg{
+.buttonScale, .msg{
     animation: button-animation 2s infinite alternate;
 }
 /* button ends */
@@ -38,29 +38,11 @@ button, .msg{
 
 
 
-/* Skills */
-.card{
-    @apply shadow-[0px_4px_4px_rgba(0,0,0,0.25)] rounded-[16px] bg-gray-900 p-10 sm:w-[364px] max-w-[364px] w-full;
-}
-.card-elements{
-    @apply flex flex-col items-center justify-center text-center;
-}
-.card .card-elements h4 {
-    @apply text-[24px] font-semibold  text-gray-200 mt-[24px] mb-8;
-}
-.card .card-elements p{
-    @apply text-white opacity-70 text-[16px] mb-6;
-}
-.card .card-elements a{
-   @apply text-gray-200 font-bold text-gray-200 border-b;
-}
-
-
 /* Project starts */
 .project{
     display: flex;
     flex-direction: column;
-    @apply lg:flex-row lg:justify-between justify-center items-center border gap-8 rounded-[20px] sm:p-12 p-3.75;
+    @apply lg:flex-row lg:justify-between justify-center items-center gap-8 rounded-[20px] sm:p-12 p-3.75;
 }
 
 .project .img-frame{
@@ -212,5 +194,21 @@ button, .msg{
     to {
         left: -100px;
 
+    }
+}
+
+
+/* Gradient background animation for button */
+#show-more{
+
+}
+/* Keyframes for moving the gradient */
+@keyframes animate-gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 200% 0%;
     }
 }
