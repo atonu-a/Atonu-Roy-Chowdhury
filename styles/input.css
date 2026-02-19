@@ -108,6 +108,19 @@ body{
 .slider .item img{
     @apply w-[70%];
 }
+/* Slider ends */
+
+
+/* Contact form starts */
+form p {
+    @apply text-gray-300
+} 
+form input, textarea{
+    @apply border border-gray-400 w-full bg-white/10 text-white p-2
+}
+
+/* Cointact form ends */
+
 
 
 

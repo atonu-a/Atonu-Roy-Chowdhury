@@ -29,6 +29,13 @@ const cursor = Cursorly.init({
   effect: { name: "trail", color: "aqua" },
 });
 
+// Mail submit button
+let submit = document.querySelector("#submit");
+submit.addEventListener("click", (e) =>{
+  e.preventDefault();
+  sendMail();
+})
+
 // All projects display button
 
 let showMore = document.querySelector("#show-more");
