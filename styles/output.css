@@ -808,14 +808,14 @@ body {
     padding: calc(var(--spacing) * 10);
   }
 }
-.autoBlur {
+/*.autoBlur {
   animation: autoBlur linear both;
   animation-timeline: view();
 }
 .fadeIn {
   animation: fadeIn linear both;
   animation-timeline: view();
-}
+}*/
 .item {
   width: 100px;
   height: 100px;
@@ -880,20 +880,22 @@ form input, textarea {
   }
 }
 @keyframes autoBlur {
-  0% {
-    filter: blur(40px);
-    opacity: 0;
-  }
-  15%, 65% {
-    filter: blur(0);
-    opacity: 1;
-  }
-  100% {
-    filter: blur(40px);
-    opacity: 0;
-  }
-}
-@keyframes fadeIn {
+        from {
+          opacity: 0;
+          clip-path: inset(100% 100% 0 0);
+        }
+        to {
+          opacity: 1;
+          clip-path: inset(0 0 0 0);
+        }
+      }
+
+      .autoBlur {
+        animation: autoBlur linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+      }
+/*@keyframes fadeIn {
   0% {
     opacity: 0;
     transform: translateX(-500px) scale(0.2);
@@ -907,7 +909,7 @@ form input, textarea {
   100% {
     filter: blur(20px);
   }
-}
+}*/
 @keyframes autoRun {
   from {
     left: 100%;
