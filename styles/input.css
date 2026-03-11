@@ -74,10 +74,10 @@ body{
 }
 /* Experience ends */
 
-.fadeIn {
+/*.fadeIn {
     animation: fadeIn linear both;
     animation-timeline: view();
-}
+}*/
 
 
 /* Slider */
