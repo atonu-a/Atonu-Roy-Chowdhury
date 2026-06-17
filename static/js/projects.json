@@ -1,0 +1,32 @@
+[
+    {
+        "id" : "project1",
+        "image" : "assets/FxLite.png",
+        "image_bg" : "[#1C222D]",
+        "title" : "FxLite - Simple Currency Coverter",
+        "working_date" : "February 2026",
+        "desc" : "FxLite is a sleek currency converter that lets users quickly convert amounts between different currencies with live exchange rates. Featuring a responsive design with intuitive dropdowns, country flags, and real-time calculations, it ensures an easy and visually appealing experience for global users.",
+        "link" : "https://fxlite-currency.vercel.app/"
+    },
+    {
+        "id" : "project2",
+        "image" : "assets/climzo.png",
+        "image_bg" : "[#1C222D]",
+        "title" : "Climzo",
+        "working_date" : "February 2026",
+        "desc" : "Climzo is a modern weather forecast app that lets users check real-time temperature, weather conditions, and sunrise or sunset times for any city. Built with Tailwind CSS and JavaScript, it provides a visually appealing, responsive interface with accurate and easy-to-read information.",
+        "link" : "https://climzo.vercel.app/"
+    },
+    {
+        "id" : "project3",
+        "image" : "assets/eznews.png",
+        "image_bg" : "white",
+        "title" : "EZ News",
+        "working_date" : "February 2026",
+        "desc" : "This News App fetches the latest articles from various categories like sports, finance, and education, allowing users to search and explore trending topics easily. Built with modern JavaScript and Tailwind CSS, it delivers a responsive and interactive reading experience across devices.",
+        "link" : "https://ez-news-ten.vercel.app/"
+    }
+    
+]
+
+
