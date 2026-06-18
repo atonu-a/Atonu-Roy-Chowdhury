@@ -1,2 +1,18 @@
 node_modules/
 .vscode/
+# env file
+.env
+
+# python
+__pycache__/
+*.pyc
+
+# virtual env
+venv/
+env/
+
+# db
+db.sqlite3
+
+# static files (optional)
+staticfiles/

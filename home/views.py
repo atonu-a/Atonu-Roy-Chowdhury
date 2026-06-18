@@ -11,6 +11,9 @@ def home(request):
     
     return render(request,"base.html", data)
 
+def projects(request):
+    return render(request, "projects.html")
+
 
 
         
