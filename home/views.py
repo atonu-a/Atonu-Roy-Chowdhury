@@ -3,7 +3,7 @@ from .models import *
 
 def home(request):    
     skills =  Skills.objects.all().order_by('id')
-    projects =  Projects.objects.all().order_by('-id')
+    projects =  Projects.objects.all().order_by('-id')[:3]
     data = {
         "skills":skills,
         "projects":projects,
