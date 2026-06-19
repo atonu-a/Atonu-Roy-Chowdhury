@@ -12,7 +12,11 @@ def home(request):
     return render(request,"base.html", data)
 
 def projects(request):
-    return render(request, "projects.html")
+    category = Category.objects.all().order_by('id')
+    data = {
+        "category": category
+    }
+    return render(request, "projects.html", data)
 
 
 

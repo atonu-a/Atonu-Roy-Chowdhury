@@ -22,7 +22,6 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
@@ -40,14 +39,15 @@
 
 </head>
 
-<body class="bg-black ">
-    <video loop autoplay muted plays-inline src="{% static 'assets/galaxy.mp4' %}"
+<body class="bg-white">
+    {% comment %} <video loop autoplay muted plays-inline src="{% static 'assets/galaxy.mp4' %}"
         class="w-screen h-screen object-cover fixed z-[-1] right-0 bottom-0 ">
-    </video>
+    </video> {% endcomment %}
 
     <img id="msg" class="msg fixed bottom-20 right-0 " src="{% static 'assets/message.png' %}" alt="">
 
 
+    {% block main %}
     <!-- Hero section starts-->
     <div id="hero" class="autoBlur">
 
@@ -176,13 +176,13 @@
 
 
     <!-- Contact Form starts -->
-    <div class="flex flex-col items-center mb-25">
+    <div class="flex flex-col items-center my-25">
         <div class="header-texts ">
             <h3>GET IN TOUCH</h3>
             <h1>Feel free to drop me a message anytime</h1>
         </div>
 
-        <form action="" class="lg:w-[30%] sm:w-[50%] w-[95%] border  flex flex-col gap-4">
+        <form action="" class="lg:w-[30%] sm:w-[50%] w-[95%] flex flex-col gap-4">
             <p>Enter Your Name</p>
             <input type="text" name="name" id="name">
             <p>Enter Your Email</p>
@@ -195,6 +195,8 @@
         </form>
     </div>
     <!-- Contact Form Ends -->
+
+    {% endblock main %}
 
 
 
