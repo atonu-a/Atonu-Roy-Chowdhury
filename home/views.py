@@ -12,9 +12,12 @@ def home(request):
     return render(request,"base.html", data)
 
 def projects(request):
+    
     category = Category.objects.all().order_by('id')
+    projects =  Projects.objects.all().order_by('-id')
     data = {
-        "category": category
+        "category": category,
+        "projects":projects,
     }
     return render(request, "projects.html", data)
 
