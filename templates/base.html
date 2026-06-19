@@ -40,9 +40,9 @@
 </head>
 
 <body class="bg-black">
-    {% comment %} {% comment %} <video loop autoplay muted plays-inline src="{% static 'assets/galaxy.mp4' %}"
+<video loop autoplay muted plays-inline src="{% static 'assets/galaxy.mp4' %}"
         class="w-screen h-screen object-cover fixed z-[-1] right-0 bottom-0 ">
-    </video> {% endcomment %} {% endcomment %}
+    </video> 
 
     <img id="msg" class="msg fixed bottom-20 right-0 " src="{% static 'assets/message.png' %}" alt="">
 
@@ -241,12 +241,12 @@
                 <p class="text-[#5b5757]">&copy; Atonu Roy Chowdhury - All Rights Reserved</p>
             </div>
             <div id="social" class="flex flex-row gap-6 sm:mt-0 mt-2.5 ">
-                <a href="https://www.facebook.com/atonu.roychowdhury.1"><img src="assets/icon-fb.png" alt=""></a>
+                <a href="https://www.facebook.com/atonu.roychowdhury.1"><img src="{% static 'assets/icon-fb.png' %}" alt=""></a>
                 <a href="https://github.com/atonu-a">
-                    <img src="assets/icon-github.png" alt="">
+                    <img src="{% static 'assets/icon-github.png' %}" alt="">
                 </a>
                 <a href="https://www.linkedin.com/in/atonuroychowdhury/">
-                    <img src="assets/linkedin.png" alt="">
+                    <img src="{% static 'assets/icon-linkedin.png' %}" alt="">
                 </a>
             </div>
         </div>
