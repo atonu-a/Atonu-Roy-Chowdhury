@@ -6,6 +6,9 @@ class Skills(models.Model):
     image = models.ImageField(upload_to='images/')
     
 class Projects(models.Model):
+    
+    # I have to add a project category section here
+
     image= models.ImageField(upload_to='images/')
     image_bg = models.CharField(max_length=10)
     project_title = models.CharField(max_length=255)

@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
@@ -38,7 +40,7 @@
 
 </head>
 
-<body class="bg-white ">
+<body class="bg-black ">
     <video loop autoplay muted plays-inline src="{% static 'assets/galaxy.mp4' %}"
         class="w-screen h-screen object-cover fixed z-[-1] right-0 bottom-0 ">
     </video>
@@ -78,7 +80,9 @@
                 <div id="button-container"
                     class="flex lg:gap-5 gap-3 lg:flex-row flex-col lg:justify-start justify-center items-center mb-10">
 
-                    <button class="button view-works buttonScale">
+                    <button type="button"
+                    class="button view-works buttonScale"
+                    data-slug = "projects">
                         Explore Works
                     </button>
 
@@ -133,13 +137,13 @@
 
 
     <!-- project starts -->
-    <div id="project-section-container" class="lg:w-[87.5%] w-[95%] mx-auto mt-0">
+    <div id="projects" class="lg:w-[87.5%] w-[95%] mx-auto mt-0">
         <div class="header-texts">
             <h3>PROJECTS</h3>
             <h1>My Recent Works</h1>
 
         </div>
-        
+
         <div class="project-container flex justify-between flex-col gap-10">
             {% for project in projects %}
             <div id='project{{project.id}}' class='project fadeIn'>
@@ -150,14 +154,16 @@
                     <h4>{{project.project_title}}</h4>
                     <p>{{project.working_date}}</p>
                     <p>{{project.desc}}</p>
-                    <button class='button visit' type="button" onclick="window.open('{{project.link}}','_blank')">Visit website</button>
+                    <button class='button visit' type="button" onclick="window.open('{{project.link}}','_blank')">Visit
+                        website</button>
                 </div>
             </div>
             {% endfor %}
         </div>
         <div class="flex justify-center">
             <button id="show-more"
-                class="text-white text-base cursor-pointer animate-[animate-gradient_2.5s_linear_infinite] bg-[linear-gradient(to_right,#00aaa7,#7e42a7,#6600c5,#6070fd,#2a46ff,#0099ff,#008ead)] bg-[length:200%_100%] border-0 rounded-[30px] px-10 py-5 text-[14px] font-bold text-center " onclick="window.location.href='{% url 'projects' %}'">
+                class="text-white text-base cursor-pointer animate-[animate-gradient_2.5s_linear_infinite] bg-[linear-gradient(to_right,#00aaa7,#7e42a7,#6600c5,#6070fd,#2a46ff,#0099ff,#008ead)] bg-[length:200%_100%] border-0 rounded-[30px] px-10 py-5 text-[14px] font-bold text-center "
+                onclick="window.location.href=`{% url 'projects' %}`">
                 All Projects
             </button>
         </div>

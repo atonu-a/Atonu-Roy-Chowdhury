@@ -4,9 +4,23 @@
 //explore works
 let visit = document.querySelector(".view-works");
 
-visit.addEventListener("click" , () =>{
-  window.location.href = "#project-section-container";
+
+visit.addEventListener("click" , function(){
+  const slug = this.getAttribute("data-slug");
+  scrollToProject(slug);
 });
+
+function scrollToProject(slug){
+  if (!slug) return;
+  
+  const container = document.getElementById(slug);
+  if (container){
+    container.scrollIntoView({ behavior: 'smooth' });
+    window.history.pushState(null, '', '/' + slug + '/');
+
+  }
+}
+
 
 
 //cv download
@@ -31,14 +45,6 @@ const cursor = Cursorly.init({
 
 
 
-// All projects display button
-
-let showMore = document.querySelector("#show-more");
-showMore.addEventListener("click", ()=>{
-  window.location.href="projects.html";
-})
-
-
 // Mail submit button
 let submit = document.querySelector("#submit");
 submit.addEventListener("click", (e) =>{
@@ -47,49 +53,49 @@ submit.addEventListener("click", (e) =>{
 });
 
 
-// Projects loading
-window.addEventListener("load", () =>{
-  loadProject();
-})
+// // Projects loading
+// window.addEventListener("load", () =>{
+//   loadProject();
+// })
 
-let projectContainer = document.querySelector(".project-container");
-
-
-async function loadProject() {
-  try{
-    let res = await fetch("projects.json");
-    console.log(res);
-    let data = await res.json();
-    console.log(data);
+// let projectContainer = document.querySelector(".project-container");
 
 
-    data.forEach(project => {
-      const card = document.createElement("div");
+// async function loadProject() {
+//   try{
+//     let res = await fetch("projects.json");
+//     console.log(res);
+//     let data = await res.json();
+//     console.log(data);
+
+
+//     data.forEach(project => {
+//       const card = document.createElement("div");
       
-      card.innerHTML = `<div id=${project.id} class='project fadeIn'>
-          <div class='img-frame bg-${project.image_bg}'>
-              <img src='${project.image}'>
-          </div>
-          <div class='desc'>
-            <h4>${project.title}</h4>
-            <p>${project.working_date}</p>
-            <p>${project.desc}</p>
-            <button class='button visit'>Visit website</button>
-          </div>
-      </div>`;
-      let visitBtn = card.querySelector(".visit");
-      console.log(project.link);
-      visitBtn.addEventListener("click" , () =>{
-        window.location.href = project.link;
+//       card.innerHTML = `<div id=${project.id} class='project fadeIn'>
+//           <div class='img-frame bg-${project.image_bg}'>
+//               <img src='${project.image}'>
+//           </div>
+//           <div class='desc'>
+//             <h4>${project.title}</h4>
+//             <p>${project.working_date}</p>
+//             <p>${project.desc}</p>
+//             <button class='button visit'>Visit website</button>
+//           </div>
+//       </div>`;
+//       let visitBtn = card.querySelector(".visit");
+//       console.log(project.link);
+//       visitBtn.addEventListener("click" , () =>{
+//         window.location.href = project.link;
         
-      })
+//       })
       
-      projectContainer.append(card);
+//       projectContainer.append(card);
       
-    });
-  }
-  catch(error){
-    console.log(error);
-  }
-}
+//     });
+//   }
+//   catch(error){
+//     console.log(error);
+//   }
+// }
 
