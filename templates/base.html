@@ -40,16 +40,16 @@
 </head>
 
 <body class="bg-black">
-<video loop autoplay muted plays-inline src="{% static 'assets/galaxy.mp4' %}"
+    <video loop autoplay muted plays-inline src="{% static 'assets/galaxy.mp4' %}"
         class="w-screen h-screen object-cover fixed z-[-1] right-0 bottom-0 ">
-    </video> 
+    </video>
 
     <img id="msg" class="msg fixed bottom-20 right-0 " src="{% static 'assets/message.png' %}" alt="">
 
 
     {% block main %}
     <!-- Hero section starts-->
-    <div id="hero" class="autoBlur">
+    <div id="hero" class="">
 
         <div id="hero-container"
             class="pt-25 flex lg:flex-row flex-col justify-center items-center w-[95%] lg:87.5% mx-auto ">
@@ -80,9 +80,7 @@
                 <div id="button-container"
                     class="flex lg:gap-5 gap-3 lg:flex-row flex-col lg:justify-start justify-center items-center mb-10">
 
-                    <button type="button"
-                    class="button view-works buttonScale"
-                    data-slug = "projects">
+                    <button type="button" class="button view-works buttonScale" data-slug="projects">
                         Explore Works
                     </button>
 
@@ -102,7 +100,7 @@
 
 
     <!-- Skill section starts -->
-    <div id="skills-container" class="w-[95%] lg:w-[87.5%] mx-auto mt-0 h-[60vh] flex flex-col items-center autoBlur">
+    <div id="skills-container" class="w-[95%] lg:w-[87.5%] mx-auto mt-0 h-[60vh] flex flex-col items-center ">
 
         <div class="header-texts ">
             <h3>SKILLS</h3>
@@ -146,7 +144,7 @@
 
         <div class="project-container flex justify-between flex-col gap-10">
             {% for project in projects %}
-            <div id='project{{project.id}}' class='project fadeIn'>
+            <div id='project{{project.id}}' class='project '>
                 <div class='img-frame bg-{{project.image_bg}}'>
                     <img width="143px" height="280px" src='{{project.image.url}}'>
                 </div>
@@ -241,7 +239,8 @@
                 <p class="text-[#5b5757]">&copy; Atonu Roy Chowdhury - All Rights Reserved</p>
             </div>
             <div id="social" class="flex flex-row gap-6 sm:mt-0 mt-2.5 ">
-                <a href="https://www.facebook.com/atonu.roychowdhury.1"><img src="{% static 'assets/icon-fb.png' %}" alt=""></a>
+                <a href="https://www.facebook.com/atonu.roychowdhury.1"><img src="{% static 'assets/icon-fb.png' %}"
+                        alt=""></a>
                 <a href="https://github.com/atonu-a">
                     <img src="{% static 'assets/icon-github.png' %}" alt="">
                 </a>
