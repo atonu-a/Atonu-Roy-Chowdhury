@@ -38,7 +38,7 @@ msg.addEventListener("click", () => {
 
 // Custom cursor
 const cursor = Cursorly.init({
-  cursor: 21,
+  cursor: 16,
   effect: { name: "trail", color: "aqua" },
 });
 
