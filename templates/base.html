@@ -66,7 +66,6 @@
 
 
 
-
     <img id="msg" class="msg fixed bottom-20 right-0 " src="{% static 'assets/message.png' %}" alt="">
 
 
@@ -221,34 +220,39 @@
 
 
 
-
-    <!-- Pop up message starts -->
-    <div id="pop-up-container" class="w-screen h-screen backdrop-blur-md hidden fixed top-0  ">
-        <div
-            class="success-msg fixed top-0 bg-white/80 hidden flex-col items-center justify-center sm:p-10 p-5 gap-20 w-full ">
-            <p class=" text-green-600 lg:text-[48px] md:text-[32px] text-[28px] font-extrabold text-center">
-                Email has been sent successfully!
-            </p>
-            <button
-                class="bg-[#00ffff] text-[#1c1c1c] border-0 rounded-[30px] px-6 py-3 text-[14px] font-bold cursor-pointer md:scale-100 scale-90">
-                Close
-            </button>
-        </div>
-        <div
-            class="blank-msg fixed top-0 bg-white/80 hidden flex-col items-center justify-center sm:p-10 p-5 gap-20 w-full ">
-            <p class=" text-red-600 lg:text-[48px] md:text-[32px] text-[28px] font-extrabold text-center">
-                Fill all the fields before submitting!
-            </p>
-            <button id="close"
-                class="bg-[#00ffff] text-[#1c1c1c] border-0 rounded-[30px] px-6 py-3 text-[14px] font-bold cursor-pointer md:scale-100 scale-90">
-                Close
-            </button>
-
-
-        </div>
-
+    <!-- Alert messages start -->
+<!-- Success alert -->
+<div id="alert-success" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden rounded-xl overflow-hidden"
+    style="min-width: 300px;">
+    <div class="flex items-center gap-3 px-4 py-3 bg-green-400">
+        <svg class="w-5 h-5 text-green-900 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span class="text-green-900 text-sm">Message sent successfully!</span>
     </div>
-    <!-- Pop up message ends -->
+    <div class="h-[3px] bg-white/10">
+        <div id="bar-success" class="h-full bg-green-900 w-full"></div>
+    </div>
+</div>
+
+<!-- Error alert -->
+<div id="alert-error" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden rounded-xl overflow-hidden"
+    style="min-width: 300px;">
+    <div class="flex items-center gap-3 px-4 py-3 bg-red-900">
+        <svg class="w-5 h-5 text-red-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span class="text-red-100 text-sm">Fill all the fields before submitting!</span>
+    </div>
+    <div class="h-[3px] bg-white/10">
+        <div id="bar-error" class="h-full bg-red-400 w-full"></div>
+    </div>
+</div>
+    <!-- Alert messages end -->
+
+
 
 
 

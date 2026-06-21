@@ -51,49 +51,7 @@ if (submit) {
   });
 }
 
-// // Projects loading
-// window.addEventListener("load", () =>{
-//   loadProject();
-// })
 
-// let projectContainer = document.querySelector(".project-container");
-
-// async function loadProject() {
-//   try{
-//     let res = await fetch("projects.json");
-//     console.log(res);
-//     let data = await res.json();
-//     console.log(data);
-
-//     data.forEach(project => {
-//       const card = document.createElement("div");
-
-//       card.innerHTML = `<div id=${project.id} class='project fadeIn'>
-//           <div class='img-frame bg-${project.image_bg}'>
-//               <img src='${project.image}'>
-//           </div>
-//           <div class='desc'>
-//             <h4>${project.title}</h4>
-//             <p>${project.working_date}</p>
-//             <p>${project.desc}</p>
-//             <button class='button visit'>Visit website</button>
-//           </div>
-//       </div>`;
-//       let visitBtn = card.querySelector(".visit");
-//       console.log(project.link);
-//       visitBtn.addEventListener("click" , () =>{
-//         window.location.href = project.link;
-
-//       })
-
-//       projectContainer.append(card);
-
-//     });
-//   }
-//   catch(error){
-//     console.log(error);
-//   }
-// }
 
 function filterProjects(category) {
   // Active class toggle
