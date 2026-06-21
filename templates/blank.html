@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Loading Animation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { mono: ['Space Mono', 'monospace'] },
+                    colors: { cyan: { DEFAULT: '#00ffff' } },
+                    animation: {
+                        'spin-slow': 'spin 2.4s linear infinite',
+                        'spin-medium': 'spin 1.8s linear infinite reverse',
+                        'spin-fast': 'spin 1.2s linear infinite',
+                        'pulse-dot': 'pulseDot 2s ease-in-out infinite',
+                        'fade-up': 'fadeUp 0.8s ease both',
+                    },
+                    keyframes: {
+                        pulseDot: {
+                            '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+                            '50%': { opacity: '0.5', transform: 'scale(0.75)' },
+                        },
+                        fadeUp: {
+                            from: { opacity: '0', transform: 'translateY(10px)' },
+                            to: { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* শুধু এই দুটো জিনিস Tailwind এ করা যায় না তাই এখানে */
+        .ring {
+            border-style: solid;
+        }
+
+        .bg-grid {
+            background-image:
+                linear-gradient(rgba(0, 255, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .glow-bar {
+            box-shadow: 0 0 8px 2px rgba(0, 255, 255, 0.6);
+        }
+
+        .glow-dot {
+            box-shadow: 0 0 18px 4px rgba(0, 255, 255, 0.5);
+        }
+
+        .fade-out {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.6s ease;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0a0a0a]">
+
+
+
+
+
+    <script>
+        const bar = document.getElementById('progressBar');
+        const label = document.getElementById('percentText');
+        const loader = document.getElementById('loader');
+
+        // ✏️ [target%, delay_ms, duration_ms] — speed adjust করতে এগুলো বদলাও
+        const steps = [
+            [20, 400, 400],
+            [55, 900, 700],
+            [82, 1600, 700],
+            [100, 2500, 900],
+        ];
+
+        let pct = 0;
+
+        function animateTo(target, dur) {
+            return new Promise(res => {
+                const from = pct, t0 = performance.now();
+                (function tick(now) {
+                    const p = Math.min((now - t0) / dur, 1);
+                    const e = p < 0.5 ? 2 * p * p : -1 + (4 - 2 * p) * p;
+                    pct = Math.round(from + (target - from) * e);
+                    bar.style.width = pct + '%';
+                    label.textContent = pct + '%';
+                    p < 1 ? requestAnimationFrame(tick) : res();
+                })(t0);
+            });
+        }
+
+        async function run() {
+            let prev = 0;
+            for (const [target, delay, dur] of steps) {
+                await new Promise(r => setTimeout(r, delay - prev));
+                await animateTo(target, dur);
+                prev = delay;
+            }
+            await new Promise(r => setTimeout(r, 400));
+            loader.classList.add('fade-out');
+            setTimeout(() => loader.remove(), 700);
+        }
+
+        run();
+    </script>
+
+</body>
+
+</html>

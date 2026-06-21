@@ -110,3 +110,27 @@ function filterProjects(category) {
         : "none";
   });
 }
+
+
+const bar = document.getElementById("bar");
+const pct = document.getElementById("pct");
+const loader = document.getElementById("loader");
+
+let current = 0;
+
+function setProgress(target) {
+  current = target;
+  bar.style.width = target + "%";
+  pct.textContent = target + "%";
+}
+
+
+function hideLoader() {
+  loader.style.opacity = "0";
+  setTimeout(() => loader.remove(), 500);
+}
+
+
+setTimeout(() => setProgress(90), 300);
+setTimeout(() => setProgress(100), 500);
+setTimeout(() => hideLoader(), 600);
