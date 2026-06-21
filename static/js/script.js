@@ -131,6 +131,6 @@ function hideLoader() {
 }
 
 
-setTimeout(() => setProgress(90), 300);
+setTimeout(() => setProgress(Math.floor(Math.random() * 20)+40), 100);
 setTimeout(() => setProgress(100), 500);
 setTimeout(() => hideLoader(), 600);
