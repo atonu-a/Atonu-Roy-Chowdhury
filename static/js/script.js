@@ -51,24 +51,40 @@ if (submit) {
   });
 }
 
-
+// Filtering projects in projects page
 
 function filterProjects(category) {
+  const container = document.querySelector(".project-container"); // ✅
+  const subloader = document.querySelector(".subloader"); // ✅
+
   // Active class toggle
   document
     .querySelectorAll(".filter-btn")
     .forEach((btn) => btn.classList.remove("active"));
   event.target.classList.add("active");
 
-  // Filter logic
-  document.querySelectorAll(".project").forEach((card) => {
-    card.style.display =
-      category === "All" || card.dataset.category === category
-        ? "flex"
-        : "none";
-  });
-}
+  // Fade out
+  container.style.opacity = "0.3";
 
+
+  subloader.classList.remove("hidden");
+  subloader.classList.add("flex");
+
+  setTimeout(() => {
+    document.querySelectorAll(".project").forEach((card) => {
+      card.style.display =
+        category === "All" || card.dataset.category === category
+          ? "flex"
+          : "none";
+    });
+
+    subloader.classList.remove("flex");
+    subloader.classList.add("hidden");
+
+    // Fade in
+    container.style.opacity = "1";
+  }, 800);
+}
 
 const bar = document.getElementById("bar");
 const pct = document.getElementById("pct");
@@ -82,13 +98,11 @@ function setProgress(target) {
   pct.textContent = target + "%";
 }
 
-
 function hideLoader() {
   loader.style.opacity = "0";
   setTimeout(() => loader.remove(), 500);
 }
 
-
-setTimeout(() => setProgress(Math.floor(Math.random() * 20)+40), 100);
+setTimeout(() => setProgress(Math.floor(Math.random() * 20) + 40), 100);
 setTimeout(() => setProgress(100), 500);
 setTimeout(() => hideLoader(), 600);
