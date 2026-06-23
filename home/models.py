@@ -32,4 +32,6 @@ class Projects(models.Model):
     working_date = models.CharField(max_length=100)
     desc = models.TextField()
     link = models.TextField()
+    github = models.TextField(blank=True)
+    
 # Create your models here.

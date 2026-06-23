@@ -1,3 +1,4 @@
+/* npx @tailwindcss/cli -i static/css/input.css -o static/css/output.css --watch */
 @import "tailwindcss";
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -24,19 +25,24 @@ body {
 
 /* Button starts */
 .button {
-  @apply bg-[#00ffff] text-[#1c1c1c] border-0 rounded-[30px] px-8 py-4 text-[14px] font-bold cursor-pointer md:scale-100 scale-90;
+  @apply bg-[#00ffff] text-[#1c1c1c] border-0 rounded-[30px] px-8 py-4 text-[14px] font-bold cursor-pointer md:scale-100 scale-90 border-[1px] border-[#00ffff] ;
 }
 .buttonScale,
 .msg {
   animation: button-animation 2s infinite alternate;
 }
 /* button ends */
+.button:hover{
+  border: #00ffff 1px solid;
+  color: #00ffff;
+  background-color: transparent;
+}
 
 /* Project starts */
 .project {
   display: flex;
   flex-direction: column;
-  @apply lg:flex-row lg:justify-between justify-center items-center gap-8 rounded-[20px] sm:p-12 p-3.75;
+  @apply lg:flex-row lg:justify-between justify-center items-center gap-8 rounded-[20px] sm:p-12 p-3.75 ;
 }
 
 .project .img-frame {
@@ -192,6 +198,10 @@ textarea {
   }
 }
 
+/* visit button */
+
+
+
 /* Gradient background animation for button */
 #show-more {
 }
@@ -203,289 +213,5 @@ textarea {
 
   100% {
     background-position: 200% 0%;
-  }
-}
-
-/* ============================================
-       GLOBAL RESET
-    ============================================ */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* ============================================
-       FULL PAGE LOADER — এটা তোমার পুরো page cover করবে
-       portfolio তে সরাসরি use করো
-    ============================================ */
-body {
-  background: #0a0a0a;
-  /* ✏️ Page background color */
-}
-
-.loader-wrap {
-  position: fixed;
-  /* পুরো screen জুড়ে থাকবে */
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: #0a0a0a;
-  /* ✏️ Loader background color */
-  z-index: 9999;
-  overflow: hidden;
-
-  /* Loading শেষে fade out হবে */
-  opacity: 1;
-  transition: opacity 0.6s ease;
-}
-
-/* JS দিয়ে .hidden class add করলে fade out হবে */
-.loader-wrap.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-/* ============================================
-       BACKGROUND GRID — সূক্ষ্ম cyber grid effect
-    ============================================ */
-.bg-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(0, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 40px 40px;
-  /* ✏️ Grid cell size */
-  pointer-events: none;
-}
-
-/* ============================================
-       CORNER BRACKETS — চার কোণের decoration
-    ============================================ */
-.corner {
-  position: absolute;
-  width: 20px;
-  /* ✏️ Bracket size */
-  height: 20px;
-  border-color: rgba(0, 255, 255, 0.35);
-  /* ✏️ Bracket color */
-  border-style: solid;
-}
-
-/* ✏️ Corners এর position adjust করো */
-.corner-tl {
-  top: 20px;
-  left: 20px;
-  border-width: 1.5px 0 0 1.5px;
-}
-
-.corner-tr {
-  top: 20px;
-  right: 20px;
-  border-width: 1.5px 1.5px 0 0;
-}
-
-.corner-bl {
-  bottom: 20px;
-  left: 20px;
-  border-width: 0 0 1.5px 1.5px;
-}
-
-.corner-br {
-  bottom: 20px;
-  right: 20px;
-  border-width: 0 1.5px 1.5px 0;
-}
-
-/* ============================================
-       SPINNING RINGS
-    ============================================ */
-.rings {
-  position: relative;
-  width: clamp(100px, 20vw, 140px);
-  /* ✏️ Ring container size — responsive */
-  height: clamp(100px, 20vw, 140px);
-  margin-bottom: 36px;
-}
-
-.ring {
-  position: absolute;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  /* ✏️ Ring thickness */
-  animation: spin linear infinite;
-}
-
-/* ✏️ Ring 1 — সবচেয়ে বাইরে */
-.ring-1 {
-  inset: 0;
-  border-top-color: #00ffff;
-  /* ✏️ Main color */
-  border-right-color: rgba(0, 255, 255, 0.3);
-  animation-duration: 1.2s;
-  /* ✏️ Speed (কম = দ্রুত) */
-}
-
-/* ✏️ Ring 2 — মাঝখানে, উল্টো দিকে ঘোরে */
-.ring-2 {
-  inset: 16px;
-  border-bottom-color: #00ffff;
-  border-left-color: rgba(0, 255, 255, 0.2);
-  animation-duration: 1.8s;
-  /* ✏️ Speed */
-  animation-direction: reverse;
-}
-
-/* ✏️ Ring 3 — সবচেয়ে ভেতরে */
-.ring-3 {
-  inset: 32px;
-  border-top-color: rgba(0, 255, 255, 0.7);
-  border-right-color: rgba(0, 255, 255, 0.15);
-  animation-duration: 2.4s;
-  /* ✏️ Speed */
-}
-
-/* ✏️ Center glowing dot */
-.center-dot {
-  position: absolute;
-  inset: 56px;
-  border-radius: 50%;
-  background: #00ffff;
-  /* ✏️ Dot color */
-  box-shadow: 0 0 18px 4px rgba(0, 255, 255, 0.5);
-  /* ✏️ Glow */
-  animation: pulse 2s ease-in-out infinite;
-}
-
-/* ============================================
-       TEXT — নাম ও tagline
-    ============================================ */
-.name {
-  font-family: "Space Mono", monospace;
-  /* ✏️ Font */
-  font-size: clamp(16px, 4vw, 22px);
-  /* ✏️ Responsive font size */
-  font-weight: 700;
-  color: #ffffff;
-  /* ✏️ Name color */
-  letter-spacing: 4px;
-  /* ✏️ Spacing */
-  text-transform: uppercase;
-  margin-bottom: 8px;
-  animation: fadeInUp 0.8s ease both;
-  animation-delay: 0.2s;
-}
-
-.tagline {
-  font-family: "Space Mono", monospace;
-  font-size: clamp(10px, 2.5vw, 12px);
-  color: #00ffff;
-  /* ✏️ Tagline color */
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 28px;
-  animation: fadeInUp 0.8s ease both;
-  animation-delay: 0.4s;
-}
-
-/* ============================================
-       PROGRESS BAR
-    ============================================ */
-.progress-bar-wrap {
-  width: clamp(160px, 40vw, 220px);
-  /* ✏️ Bar width — responsive */
-  height: 2px;
-  /* ✏️ Bar thickness */
-  background: rgba(0, 255, 255, 0.15);
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.progress-bar {
-  height: 100%;
-  width: 0%;
-  background: #00ffff;
-  /* ✏️ Bar fill color */
-  border-radius: 2px;
-  box-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
-  /* ✏️ Glow */
-  transition: width 0.3s ease;
-}
-
-.percent {
-  font-family: "Space Mono", monospace;
-  font-size: 11px;
-  color: rgba(0, 255, 255, 0.6);
-  /* ✏️ Percentage text color */
-  letter-spacing: 2px;
-  margin-top: 10px;
-}
-
-/* ============================================
-       ANIMATIONS
-    ============================================ */
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  50% {
-    opacity: 0.5;
-    transform: scale(0.75);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ============================================
-       MOBILE RESPONSIVE
-    ============================================ */
-@media (max-width: 480px) {
-  .corner {
-    width: 14px;
-    height: 14px;
-  }
-
-  .corner-tl {
-    top: 12px;
-    left: 12px;
-  }
-
-  .corner-tr {
-    top: 12px;
-    right: 12px;
-  }
-
-  .corner-bl {
-    bottom: 12px;
-    left: 12px;
-  }
-
-  .corner-br {
-    bottom: 12px;
-    right: 12px;
   }
 }

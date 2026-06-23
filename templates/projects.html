@@ -1,74 +1,51 @@
-{% extends "base.html" %} {% block main %}
-
-
-<div class="navbar shadow-sm border-b border-[#00ffff]">
-  <div class="navbar-start">
-    <div class="dropdown">
-      <div tabindex="0" role="button" class="hover:bg-[#00ffff] hover:text-black text-[#00ffff] text-[14px] font-bold cursor-pointer px-8 py-4 rounded-[30px] md:scale-100 scale-90 lg:hidden">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h8m-8 6h16"
-          />
-        </svg>
+{% extends 'base.html' %} {% block main %}
+  <div class="navbar shadow-sm border-b border-[#00ffff]">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="hover:bg-[#00ffff] hover:text-black text-[#00ffff] text-[14px] font-bold cursor-pointer px-8 py-4 rounded-[30px] md:scale-100 scale-90 lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </div>
+        <ul tabindex="-1" class="menu menu-sm dropdown-content bg-black text-[#00ffff] rounded-box z-1 mt-3 w-52 p-2 shadow">
+          <button class="hover:border-b border-[#00ffff]" onclick="window.location.href=`{% url 'projects' %}`">All Projects</button>
+          {% for cat in category %}
+            <button class="hover:border-b border-[#00ffff]" onclick="filterProjects('{{ cat.name }}')">{{ cat.name }}</button>
+          {% endfor %}
+        </ul>
       </div>
-      <ul
-        tabindex="-1"
-        class="menu menu-sm dropdown-content bg-black text-[#00ffff] rounded-box z-1 mt-3 w-52 p-2 shadow "
-      >
-      <button class="hover:border-b border-[#00ffff]"onclick="window.location.href=`{% url 'projects' %}`">All Projects</button>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1 gap-10">
+        <button class="hover:bg-[#00ffff] hover:text-black text-[#00ffff] text-[14px] font-bold cursor-pointer px-8 py-4 rounded-[30px] md:scale-100 scale-90" onclick="window.location.href=`{% url 'projects' %}`">All Projects</button>
         {% for cat in category %}
-        <button class="hover:border-b border-[#00ffff]" onclick="filterProjects('{{cat.name}}')">{{ cat.name }}</button>
+          <button class="hover:bg-[#00ffff] hover:text-black text-[#00ffff] text-[14px] font-bold cursor-pointer px-8 py-4 rounded-[30px] md:scale-100 scale-90" onclick="filterProjects('{{ cat.name }}')">{{ cat.name }}</button>
         {% endfor %}
       </ul>
     </div>
-  </div>
-  <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1 gap-10">
-        <button class="hover:bg-[#00ffff] hover:text-black text-[#00ffff] text-[14px] font-bold cursor-pointer px-8 py-4 rounded-[30px] md:scale-100 scale-90" onclick="window.location.href=`{% url 'projects' %}`">All Projects</button>
-      {% for cat in category %}
-      <button class="hover:bg-[#00ffff] hover:text-black text-[#00ffff] text-[14px] font-bold cursor-pointer px-8 py-4 rounded-[30px] md:scale-100 scale-90" onclick="filterProjects('{{cat.name}}')">{{ cat.name }}</button>
-      {% endfor %}
-    </ul>
-  </div>
-  <div class="navbar-end">
-    <a href="{% url 'home' %}" class="hover:bg-[#00ffff] hover:text-black text-[#00ffff] text-[14px] font-bold cursor-pointer px-8 py-4 rounded-[30px] md:scale-100 scale-90">Home</a>
-  </div>
-</div>
-
-
-<h4 class="text-[#00ffff] text-center">Get the source codes <a class="text-red-500 underline" href="https://github.com/atonu-a?tab=repositories">here</a></h4>
-
-<div class="project-container flex justify-between flex-col gap-10">
-  {% for project in projects %}
-  <div id="project{{project.id}}" class="project flex flex-col" data-category="{{project.category.name}}">
-    <div class="img-frame bg-{{project.image_bg}}">
-      <img width="143px" height="280px" src="{{project.image.url}}" />
-    </div>
-    <div class="desc">
-      <h4>{{project.project_title}}</h4>
-      <p>{{project.working_date}}</p>
-      <p>{{project.desc}}</p>
-      <button
-        class="button visit"
-        type="button"
-        onclick="window.open('{{project.link}}','_blank')"
-      >
-        Visit website
-      </button>
+    <div class="navbar-end">
+      <a href="{% url 'home' %}" class="hover:bg-[#00ffff] hover:text-black text-[#00ffff] text-[14px] font-bold cursor-pointer px-8 py-4 rounded-[30px] md:scale-100 scale-90">Home</a>
     </div>
   </div>
-  {% endfor %}
-</div>
 
+  <h4 class="text-[#00ffff] text-center">Get the source codes <a class="text-red-500 underline" href="https://github.com/atonu-a?tab=repositories">here</a></h4>
 
-{% endblock main %}
-
+  <div class="project-container flex justify-between flex-col gap-10">
+    {% for project in projects %}
+      <div id="project{{ project.id }}" class="project flex flex-col" data-category="{{ project.category.name }}">
+        <div class="img-frame bg-{{ project.image_bg }}">
+          <img width="143px" height="280px" src="{{ project.image.url }}" />
+        </div>
+        <div class="desc">
+          <h4>{{ project.project_title }}</h4>
+          <p>{{ project.working_date }}</p>
+          <p>{{ project.desc }}</p>
+          <div class="flex sm:gap-3 gap-0">
+            <button class="button visit" type="button" onclick="window.open('{{ project.link }}','_blank')"><i class="fa-solid fa-globe"></i> Visit website</button>
+            <button class="button visit" type="button" onclick="window.open('{{ project.github }}', '_blank')"><i class="fa-brands fa-github"></i> Source Code</button>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

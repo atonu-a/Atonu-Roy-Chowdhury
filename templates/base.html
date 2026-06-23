@@ -41,9 +41,9 @@
 
 <body class="">
 
-<video loop autoplay muted plays-inline src="{% static 'assets/galaxy.mp4' %}"
+    <video loop autoplay muted plays-inline src="{% static 'assets/galaxy.mp4' %}"
         class="w-screen h-screen object-cover fixed z-[-1] right-0 bottom-0 ">
-    </video> 
+    </video>
     <!-- LOADER -->
     <div id="loader"
         class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black gap-6 transition-opacity duration-500">
@@ -174,8 +174,14 @@
                     <h4>{{project.project_title}}</h4>
                     <p>{{project.working_date}}</p>
                     <p>{{project.desc}}</p>
-                    <button class='button visit' type="button" onclick="window.open('{{project.link}}','_blank')">Visit
-                        website</button>
+                    <div class="flex sm:gap-3 gap-0">
+                        <button class="button visit" type="button"
+                            onclick="window.open('{{ project.link }}','_blank')"><i class="fa-solid fa-globe"></i> Visit
+                            website</button>
+                        <button class="button visit" type="button"
+                            onclick="window.open('{{ project.github }}', '_blank')"><i class="fa-brands fa-github"></i>
+                            Source Code</button>
+                    </div>
                 </div>
             </div>
             {% endfor %}
@@ -221,35 +227,35 @@
 
 
     <!-- Alert messages start -->
-<!-- Success alert -->
-<div id="alert-success" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden rounded-xl overflow-hidden"
-    style="min-width: 300px;">
-    <div class="flex items-center gap-3 px-4 py-3 bg-green-400">
-        <svg class="w-5 h-5 text-green-900 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-        <span class="text-green-900 text-sm">Message sent successfully!</span>
+    <!-- Success alert -->
+    <div id="alert-success" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden rounded-xl overflow-hidden"
+        style="min-width: 300px;">
+        <div class="flex items-center gap-3 px-4 py-3 bg-green-400">
+            <svg class="w-5 h-5 text-green-900 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span class="text-green-900 text-sm">Message sent successfully!</span>
+        </div>
+        <div class="h-[3px] bg-white/10">
+            <div id="bar-success" class="h-full bg-green-900 w-full"></div>
+        </div>
     </div>
-    <div class="h-[3px] bg-white/10">
-        <div id="bar-success" class="h-full bg-green-900 w-full"></div>
-    </div>
-</div>
 
-<!-- Error alert -->
-<div id="alert-error" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden rounded-xl overflow-hidden"
-    style="min-width: 300px;">
-    <div class="flex items-center gap-3 px-4 py-3 bg-red-900">
-        <svg class="w-5 h-5 text-red-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-        <span class="text-red-100 text-sm">Fill all the fields before submitting!</span>
+    <!-- Error alert -->
+    <div id="alert-error" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden rounded-xl overflow-hidden"
+        style="min-width: 300px;">
+        <div class="flex items-center gap-3 px-4 py-3 bg-red-900">
+            <svg class="w-5 h-5 text-red-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span class="text-red-100 text-sm">Fill all the fields before submitting!</span>
+        </div>
+        <div class="h-[3px] bg-white/10">
+            <div id="bar-error" class="h-full bg-red-400 w-full"></div>
+        </div>
     </div>
-    <div class="h-[3px] bg-white/10">
-        <div id="bar-error" class="h-full bg-red-400 w-full"></div>
-    </div>
-</div>
     <!-- Alert messages end -->
 
 
@@ -283,7 +289,7 @@
 
 
     <script src="{% static 'js/script.js' %}"></script>
-    
+
 
 </body>
 
