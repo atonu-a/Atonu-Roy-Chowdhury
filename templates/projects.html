@@ -1,11 +1,9 @@
 {% extends 'base.html' %} {% block main %}
-  <div class="navbar shadow-sm border-b border-[#00ffff]">
+  <div class="navbar shadow-sm border-b border-[#00ffff] sticky top-0 bg-black z-100">
     <div class="navbar-start">
       <div class="dropdown">
         <div tabindex="0" role="button" class="hover:bg-[#00ffff] hover:text-black text-[#00ffff] text-[14px] font-bold cursor-pointer px-8 py-4 rounded-[30px] md:scale-100 scale-90 lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-          </svg>
+          <i class="fa-solid fa-bars"></i>
         </div>
         <ul tabindex="-1" class="menu menu-sm dropdown-content bg-black text-[#00ffff] rounded-box z-1 mt-3 w-52 p-2 shadow">
           <button class="hover:border-b border-[#00ffff]" onclick="window.location.href=`{% url 'projects' %}`">All Projects</button>
