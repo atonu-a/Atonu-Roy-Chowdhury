@@ -176,6 +176,12 @@
                     <h4>{{project.project_title}}</h4>
                     <p>{{project.working_date}}</p>
                     <p>{{project.desc}}</p>
+                    <div class="flex gap-2">
+                        {% for skill in project.skills.all %}
+                        <span data-slot="badge" class="bg-[#03ff03] px-3 py-1 text-[12px] rounded-2xl font-bold ">{{skill.skill_title}}</span>
+                        {% endfor %}
+                    </div>
+                    
                     <div class="flex sm:gap-3 gap-0">
                         <button class="button visit" type="button"
                             onclick="window.open('{{ project.link }}','_blank')"><i class="fa-solid fa-globe"></i> Visit

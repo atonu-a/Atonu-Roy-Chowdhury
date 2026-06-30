@@ -42,7 +42,7 @@
 
 
     {% for project in projects %}
-      <div id="project{{ project.id }}" class="project flex flex-col" data-category="{{ project.category.name }}">
+      <div id="project{{ project.id }}" class="project flex flex-col " data-category="{{ project.category.name }}">
         <div class="img-frame bg-{{ project.image_bg }}">
           <img width="143px" height="280px" src="{{ project.image.url }}" />
         </div>

@@ -7,6 +7,8 @@ from typing import Iterable
 class Skills(models.Model):
     skill_title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='images/')
+    def __str__(self):
+        return self.skill_title
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
@@ -33,5 +35,9 @@ class Projects(models.Model):
     desc = models.TextField()
     link = models.TextField()
     github = models.TextField(blank=True)
+    skills = models.ManyToManyField(Skills, related_name="projects")
+    
+    def __str__(self):
+        return self.project_title
     
 # Create your models here.
