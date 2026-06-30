@@ -10,6 +10,7 @@ if (visit) {
   });
 }
 
+
 function scrollToProject(slug) {
   if (!slug) return;
 

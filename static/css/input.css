@@ -38,12 +38,18 @@ body {
   background-color: transparent;
 }
 
+.nav-btn{
+  @apply hover:bg-[#00ffff] hover:text-black text-[#00ffff] text-[14px] font-bold cursor-pointer px-8 py-4 rounded-[30px] md:scale-100 scale-90;
+}
+
 /* Project starts */
 .project {
   display: flex;
   flex-direction: column;
   @apply lg:flex-row lg:justify-between justify-center items-center gap-8 rounded-[20px] sm:p-12 p-3.75 ;
 }
+
+
 
 .project .img-frame {
   @apply lg:w-100 w-full h-75 rounded-[20px] text-center flex justify-center items-center cursor-pointer hover:scale-102 lg:hover:scale-105 duration-500  mx-auto;
