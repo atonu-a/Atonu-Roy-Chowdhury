@@ -59,7 +59,7 @@ body {
   @apply border-[3px] border-black rounded-[20px];
 }
 .project .desc {
-  @apply lg:w-[66%]  flex flex-col gap-3 items-start text-left;
+  @apply lg:w-[66%]  flex flex-col gap-3 items-start text-left ;
 }
 .project .desc h4 {
   @apply lg:text-[32px] text-[24px] font-bold text-gray-200;
