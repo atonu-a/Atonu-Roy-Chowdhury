@@ -25,6 +25,4 @@ def projects(request):
 
 
 
-        
     
-# Create your views here.
