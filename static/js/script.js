@@ -104,6 +104,6 @@ function hideLoader() {
   setTimeout(() => loader.remove(), 500);
 }
 
-setTimeout(() => setProgress(Math.floor(Math.random() * 20) + 40), 100);
-setTimeout(() => setProgress(100), 500);
-setTimeout(() => hideLoader(), 600);
+setTimeout(() => setProgress(Math.floor(Math.random() * 40) + 40), 100);
+setTimeout(() => setProgress(100), 300);
+setTimeout(() => hideLoader(), 500);
