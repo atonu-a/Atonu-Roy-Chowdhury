@@ -35,15 +35,19 @@
     </script>
     <script src="{% static 'js/email.js' %}"></script>
 
-    <title>Atonu Roy Chowdhury</title>
+    <title>Atonu Roy Chowdhury — Backend Developer</title>
+
 
 </head>
 
 <body class="">
 
+    <div id="bg-wash"></div>
+
     <video loop autoplay muted plays-inline src="{% static 'assets/galaxy.mp4' %}"
-        class="w-screen h-screen object-cover fixed z-[-1] right-0 bottom-0 ">
+        class="w-screen h-screen object-cover fixed z-[-2] right-0 bottom-0 opacity-70">
     </video>
+
     <!-- LOADER -->
     <div id="loader"
         class="fixed  inset-0 z-100 flex flex-col items-center justify-center bg-black gap-6 transition-opacity duration-500">
@@ -73,99 +77,102 @@
 
     {% block main %}
     <!-- Navbar starts -->
-    <!-- <div class="navbar shadow-sm border-b border-[#00ffff] sticky top-0 bg-black z-100">
-        <div class="navbar-start">
-            <div class="dropdown">
+    <div class="navbar sticky top-0 z-100">
+        <div class="nav-inner">
+            <div class="nav-logo" onclick="window.location.href=`{% url 'home' %}`"><span class="dot"></span>atonu<span class="text-[#8291a3]">.dev</span></div>
+
+            <!-- Desktop menu -->
+            <div class="hidden lg:flex">
+                <ul class="menu menu-horizontal nav-links px-1">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#skills-container">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Mobile hamburger -->
+            <div class="dropdown dropdown-end lg:hidden">
                 <div tabindex="0" role="button"
-                    class="hover:bg-[#00ffff] hover:text-black text-[#00ffff] text-[14px] font-bold cursor-pointer px-8 py-4 rounded-[30px] md:scale-100 scale-90 lg:hidden">
+                    class="text-[var(--muted)] hover:text-[var(--text)] hover:bg-white/5 transition-all duration-[250ms] px-3 py-2 rounded-full cursor-pointer">
                     <i class="fa-solid fa-bars"></i>
                 </div>
-                <ul tabindex="-1"
-                    class="menu menu-sm dropdown-content bg-black text-[#00ffff] rounded-box z-1 mt-3 w-52 p-2 shadow">
-                    <button class="hover:border-b border-[#00ffff]"
-                        onclick="window.location.href=`{% url 'projects' %}`">All Projects</button>
-                    {% for cat in category %}
-                    <button class="hover:border-b border-[#00ffff]" onclick="filterProjects('{{ cat.name }}')">{{
-                        cat.name
-                        }}</button>
-                    {% endfor %}
+                <ul tabindex="-1" class="menu menu-sm dropdown-content filter-dropdown z-1">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#skills-container">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
-
-
-
-        <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1 gap-10">
-                <button
-                    class="hover:bg-[#00ffff] hover:text-black text-[#00ffff] text-[14px] font-bold cursor-pointer px-8 py-4 rounded-[30px] md:scale-100 scale-90"
-                    onclick="window.location.href=`{% url 'projects' %}`">All Projects</button>
-                {% for cat in category %}
-                <button
-                    class="hover:bg-[#00ffff] hover:text-black text-[#00ffff] text-[14px] font-bold cursor-pointer px-8 py-4 rounded-[30px] md:scale-100 scale-90"
-                    onclick="filterProjects('{{ cat.name }}')">{{ cat.name }}</button>
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="navbar-end">
-            <a href="{% url 'home' %}"
-                class="hover:bg-[#00ffff] hover:text-black text-[#00ffff] text-[14px] font-bold cursor-pointer px-8 py-4 rounded-[30px] md:scale-100 scale-90"><i
-                    class="fa-solid fa-house"></i> Home</a>
-        </div>
-    </div> -->
+    </div>
     <!-- Navbar ends -->
 
 
-
-
-
-
-
     <!-- Hero section starts-->
-    <div id="hero" class="">
+    <div id="hero">
 
         <div id="hero-container"
-            class="pt-25 flex lg:flex-row flex-col justify-center items-center w-[95%] lg:87.5% mx-auto ">
-            <div id="hero-contents" class="w-full lg:w-[70%] text-left ">
+            class="flex lg:flex-row flex-col justify-between items-center gap-16 w-[95%] lg:w-[87.5%] mx-auto">
+
+            <div id="hero-contents" class="w-full lg:w-[54%] text-left reveal">
+
+                <p class="kicker mb-5">available for work<span class="blink">_</span></p>
+
                 <div class="inline-block">
-                    <h2
-                        class="animated text-[28px] sm:text-[36px] lg:text-[44px] xl:text-[48px] font-black mb-3.75 lg:mb-7.5 text-center text-[#00ffff] w-full font-mono">
+                    <h2 class="hero-title-name mb-4">
                         Atonu Roy Chowdhury.
                     </h2>
                 </div>
 
-
-                <h1
-                    class="text-[36px] sm:text-[42px] lg:text-[50px] mb-3.75 sm:mb-5 lg:mb-8.5 font-bold text-white text-center">
-                    Backend Developer
-                    <span class="text-[#00ffff]">
-                        Creating
-                    </span>
-                    End-to-End Modern Web Solutions
+                <h1 class="hero-title mb-6">
+                    Backend Developer <span class="grad">building end-to-end</span> web systems that hold up under load.
                 </h1>
 
-                <p class="mb-3.75 sm:mb-5 lg:mb-9 lg:text-[18px] text-[#8A8A8A]">
-                    passionate Backend Developer focused on building scalable server-side logic and efficient database
-                    architectures. I specialize in
-                    creating robust APIs and ensuring seamless data flow between the server and the user.
+                <p class="hero-sub mb-10">
+                    I design scalable server-side logic and efficient database architectures — robust APIs,
+                    clean data flow, and infrastructure the rest of the product can depend on.
                 </p>
 
                 <div id="button-container"
                     class="flex lg:gap-5 gap-3 lg:flex-row flex-col lg:justify-start justify-center items-center mb-10">
 
-                    <button type="button" class="button view-works buttonScale" data-slug="projects">
+                    <button type="button" class="button view-works cta-primary" data-slug="projects" onclick="window.location.href=`{% url 'projects' %}`">
                         Explore Works
                     </button>
 
-                    <button id="button"
-                        class="border border-[#00ffff] text-[#00ffff] text-[14px] font-bold cursor-pointer px-8 py-4 rounded-[30px] md:scale-100 scale-90 buttonScale">
+                    <button id="button" class="cta-ghost">
                         Download CV
                     </button>
                 </div>
             </div>
-            <!-- <div id="hero-image" class="scale-90">
-                <img src="assets/atonu.png" alt="hero-image">
-            </div> -->
+
+            <!-- Signature element: terminal card -->
+            <div class="w-full lg:w-[42%] flex justify-center lg:justify-end reveal">
+                <div class="term">
+                    <div class="term-bar">
+                        <span class="term-dot" style="background:#ff5f57"></span>
+                        <span class="term-dot" style="background:#febc2e"></span>
+                        <span class="term-dot" style="background:#28c840"></span>
+                        <span class="title">profile.json</span>
+                    </div>
+                    <div class="term-body">
+                        <div><span class="c">{</span></div>
+                        <div>&nbsp;&nbsp;<span class="k">"name"</span><span class="c">:</span> <span class="s">"Atonu
+                                Roy Chowdhury"</span><span class="c">,</span></div>
+                        <div>&nbsp;&nbsp;<span class="k">"role"</span><span class="c">:</span> <span class="s">"Backend
+                                Developer"</span><span class="c">,</span></div>
+                        <div>&nbsp;&nbsp;<span class="k">"focus"</span><span class="c">:</span> <span
+                                class="c">[</span><span class="s">"APIs"</span><span class="c">,</span> <span
+                                class="s">"databases"</span><span class="c">,</span> <span class="s">"scale"</span><span
+                                class="c">]</span><span class="c">,</span></div>
+                        <div>&nbsp;&nbsp;<span class="k">"status"</span><span class="c">:</span> <span
+                                class="p">200</span> <span class="c">// OK</span></div>
+                        <div><span class="c">}</span><span class="cursor-blink"></span></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <!-- Hero section ends -->
@@ -173,33 +180,21 @@
 
 
     <!-- Skill section starts -->
-    <div id="skills-container" class="w-[95%] lg:w-[87.5%] mx-auto mt-0 h-[60vh] flex flex-col items-center ">
+    <div id="skills-container" class="w-[95%] lg:w-[87.5%] mx-auto flex flex-col items-center reveal">
 
-        <div class="header-texts ">
-            <h3>SKILLS</h3>
+        <div class="header-texts">
+            <p class="eyebrow">// 01 — skills</p>
             <h1>Skills That Power My Code</h1>
-
         </div>
 
-        <!-- Slider -->
-        <div class="slider absolute bottom-[0%] lg:w-[60%] w-[90%] h-25 mx-auto overflow-hidden [mask-image:linear-gradient(to right, transparent, #000 10% 90%, transparent)] mix-blend-difference opacity-[0.8] md:[min-width: calc(100px * {{skills.count}})] relative mb-15"
-            style="--quantity: {{ skills.count }}; reverse=" true">
-
-
-            <div class="list flex gap-10 w-full h-full relative ">
-                {% for skill in skills %}
-
-                <div class="item" style="--position: {{ forloop.counter }}"><img src="{{ skill.image.url }}"
-                        alt="{{skill.title}} "></div>
-
-                {% endfor %}
-
+        <div class="skill-grid">
+            {% for skill in skills %}
+            <div class="skill-card" style="--d: {{ forloop.counter0 }}">
+                <div class="skill-icon"><img src="{{ skill.image.url }}" alt="{{ skill.title }}"></div>
+                <p>{{ skill.title }}</p>
             </div>
+            {% endfor %}
         </div>
-        <p class="text-gray-200 text-center">
-            Hover or Click on any skill to stop the slider and highlight the skill
-        </p>
-
 
     </div>
     <!-- Skill section ends -->
@@ -208,16 +203,15 @@
 
 
     <!-- project starts -->
-    <div id="projects" class="lg:w-[87.5%] w-[95%] mx-auto mt-0">
+    <div id="projects" class="lg:w-[87.5%] w-[95%] mx-auto reveal">
         <div class="header-texts">
-            <h3>PROJECTS</h3>
+            <p class="eyebrow">// 02 — projects</p>
             <h1>My Recent Works</h1>
-
         </div>
 
-        <div class="project-container flex justify-between flex-col gap-10">
+        <div class="project-container flex justify-between flex-col gap-8">
             {% for project in projects %}
-            <div id='project{{project.id}}' class='project '>
+            <div id='project{{project.id}}' class='project'>
                 <div class='img-frame bg-{{project.image_bg}}'>
                     <img width="143px" height="280px" src='{{project.image.url}}'>
                 </div>
@@ -225,14 +219,13 @@
                     <h4>{{project.project_title}}</h4>
                     <p>{{project.working_date}}</p>
                     <p>{{project.desc}}</p>
-                    <div class="flex gap-2 flex-wrap">
+                    <div class="flex gap-2 flex-wrap mt-2">
                         {% for skill in project.skills.all %}
-                        <span data-slot="badge"
-                            class="bg-[#00ff00] px-3 py-1 text-[12px] rounded-2xl font-bold ">{{skill.skill_title}}</span>
+                        <span data-slot="badge" class="px-3 py-1 text-[12px] rounded-2xl">{{skill.skill_title}}</span>
                         {% endfor %}
                     </div>
 
-                    <div class="flex sm:gap-3 gap-0">
+                    <div class="flex sm:gap-0 gap-0 flex-wrap">
                         <button class="button visit" type="button"
                             onclick="window.open('{{ project.link }}','_blank')"><i class="fa-solid fa-globe"></i> Visit
                             website</button>
@@ -244,7 +237,7 @@
             </div>
             {% endfor %}
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center mt-14">
             <button id="show-more"
                 class="text-white text-base cursor-pointer animate-[animate-gradient_2.5s_linear_infinite] bg-[linear-gradient(to_right,#00aaa7,#7e42a7,#6600c5,#6070fd,#2a46ff,#0099ff,#008ead)] bg-[length:200%_100%] border-0 rounded-[30px] px-10 py-5 text-[14px] font-bold text-center "
                 onclick="window.location.href=`{% url 'projects' %}`">
@@ -260,22 +253,22 @@
 
 
     <!-- Contact Form starts -->
-    <div id="contact" class="flex flex-col items-center my-25">
-        <div class="header-texts ">
-            <h3>GET IN TOUCH</h3>
+    <div id="contact" class="flex flex-col items-center reveal">
+        <div class="header-texts">
+            <p class="eyebrow">// 03 — get in touch</p>
             <h1>Feel free to drop me a message anytime</h1>
         </div>
 
-        <form action="" class="lg:w-[30%] sm:w-[50%] w-[95%] flex flex-col gap-4">
-            <p>Enter Your Name</p>
-            <input type="text" name="name" id="name">
-            <p>Enter Your Email</p>
-            <input type="email" name="email" id="email">
+        <form action="" class="lg:w-[34%] sm:w-[60%] w-[95%] flex flex-col">
+            <p>Your Name</p>
+            <input type="text" name="name" id="name" placeholder="Jane Doe">
+            <p>Your Email</p>
+            <input type="email" name="email" id="email" placeholder="jane@email.com">
             <p>Your Message</p>
-            <textarea name="msg" id="sms" rows="4"></textarea><br>
+            <textarea name="msg" id="sms" rows="4" placeholder="Tell me about your project..."></textarea>
 
             <button id="submit"
-                class="focus:bg-[#00ffff] hover:bg-[#00ffff] w-[50%] mx-auto focus:text-black hover:text-black border border-[#00ffff] duration-500 text-[#1c1c1c] text-white rounded-[30px] px-8 py-4 text-[14px] font-bold cursor-pointer md:scale-100 scale-90">Submit</button>
+                class="focus:bg-[#00ffff] hover:bg-[#00ffff] w-[55%] mx-auto focus:text-black hover:text-black border border-[#00ffff] duration-300 text-white rounded-[30px] px-8 py-4 text-[14px] font-bold cursor-pointer md:scale-100 scale-90">Submit</button>
         </form>
     </div>
     <!-- Contact Form Ends -->
@@ -347,6 +340,18 @@
 
 
     <script src="{% static 'js/script.js' %}"></script>
+
+    <!-- lightweight scroll-reveal, degrades gracefully if IntersectionObserver is unavailable -->
+    <script>
+        if ('IntersectionObserver' in window) {
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+            }, { threshold: 0.15 });
+            document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+        } else {
+            document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+        }
+    </script>
 
 
 </body>

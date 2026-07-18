@@ -84,7 +84,7 @@ function filterProjects(category) {
 
     // Fade in
     container.style.opacity = "1";
-  }, 800);
+  }, 300);
 }
 
 const bar = document.getElementById("bar");
