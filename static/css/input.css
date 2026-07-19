@@ -419,6 +419,45 @@ section {
   @apply relative py-24;
 }
 
+/* ---- education timeline ---- */
+.edu-container {
+  @apply relative;
+}
+.edu-card {
+  @apply relative flex gap-6 pl-7 pb-2;
+  border-left: 1px solid var(--line);
+}
+.edu-card::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--signal);
+  box-shadow: 0 0 10px var(--signal);
+}
+.edu-meta {
+  @apply flex-none w-[120px] pt-0.5 text-[12px];
+  font-family: var(--mono);
+  color: var(--muted);
+}
+.edu-body h4 {
+  @apply font-bold text-[19px];
+  font-family: var(--sans);
+  color: var(--text);
+}
+.edu-institute {
+  @apply text-[12.5px] mt-0.5;
+  font-family: var(--mono);
+  color: var(--signal);
+}
+.edu-desc {
+  @apply text-[14.5px] leading-[1.7] max-w-[62ch] mt-2 mb-2.5;
+  color: var(--muted);
+}
+
 /* ---- navbar ---- */
 .navbar {
   @apply sticky top-0 z-100 border-b p-0 min-h-[64px];

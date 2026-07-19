@@ -201,8 +201,8 @@
   .top-0 {
     top: 0;
   }
-  .top-4 {
-    top: calc(var(--spacing) * 4);
+  .top-15 {
+    top: calc(var(--spacing) * 15);
   }
   .right-0 {
     right: 0;
@@ -224,9 +224,6 @@
   }
   .z-100 {
     z-index: 100;
-  }
-  .z-\[-2\] {
-    z-index: -2;
   }
   .container {
     width: 100%;
@@ -1230,6 +1227,58 @@ form p {
 section {
   position: relative;
   padding-block: calc(var(--spacing) * 24);
+}
+.edu-container {
+  position: relative;
+}
+.edu-card {
+  position: relative;
+  display: flex;
+  gap: calc(var(--spacing) * 6);
+  padding-bottom: calc(var(--spacing) * 2);
+  padding-left: calc(var(--spacing) * 7);
+  border-left: 1px solid var(--line);
+}
+.edu-card::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--signal);
+  box-shadow: 0 0 10px var(--signal);
+}
+.edu-meta {
+  width: 120px;
+  flex: none;
+  padding-top: calc(var(--spacing) * 0.5);
+  font-size: 12px;
+  font-family: var(--mono);
+  color: var(--muted);
+}
+.edu-body h4 {
+  font-size: 19px;
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--sans);
+  color: var(--text);
+}
+.edu-institute {
+  margin-top: calc(var(--spacing) * 0.5);
+  font-size: 12.5px;
+  font-family: var(--mono);
+  color: var(--signal);
+}
+.edu-desc {
+  margin-top: calc(var(--spacing) * 2);
+  margin-bottom: calc(var(--spacing) * 2.5);
+  max-width: 62ch;
+  font-size: 14.5px;
+  --tw-leading: 1.7;
+  line-height: 1.7;
+  color: var(--muted);
 }
 .navbar {
   position: sticky;
