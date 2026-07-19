@@ -28,13 +28,13 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
+  /* *,
   *::before,
   *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
-  }
+  } */
 }
 
 /* ---- background wash: kills the "raw video slapped on a page" look ---- */
@@ -68,10 +68,11 @@ body {
 }
 
 #hero,
-#skills-container,
-#project-section-container,
-#exp-container {
-  @apply mb-[156px];
+#skills,
+#education,
+#projects,
+#contact {
+  @apply mb-39;
 }
 
 /* Header starts */
@@ -608,7 +609,7 @@ section {
 }
 
 /* ---- skills ---- */
-#skills-container {
+#skills {
   @apply pt-10;
 }
 

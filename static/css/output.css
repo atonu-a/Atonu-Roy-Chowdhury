@@ -763,13 +763,6 @@ body {
   color: var(--text);
   font-family: var(--sans);
 }
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-  }
-}
 #bg-wash {
   pointer-events: none;
   position: fixed;
@@ -783,8 +776,8 @@ body {
 #loader p#pct {
   font-family: var(--mono);
 }
-#hero, #skills-container, #project-section-container, #exp-container {
-  margin-bottom: 156px;
+#hero, #skills, #education, #projects, #contact {
+  margin-bottom: calc(var(--spacing) * 39);
 }
 .header-texts {
   margin-inline: auto;
@@ -1501,7 +1494,7 @@ section {
   background: var(--signal);
   animation: blink 1s step-end infinite;
 }
-#skills-container {
+#skills {
   padding-top: calc(var(--spacing) * 10);
 }
 .skill-group + .skill-group {
