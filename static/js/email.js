@@ -1,4 +1,4 @@
-function sendMail() {
+async function sendMail() {
   let name = document.querySelector("#name").value;
   let email = document.querySelector("#email").value;
   let msg = document.getElementById("sms").value;
@@ -9,15 +9,21 @@ function sendMail() {
   }
 
   let prams = { name, email, msg };
+  try {
+    await emailjs.send(
+      "service_1sebw7w",
+      "template_a9bfuuw", 
+      prams
+    );
 
-  emailjs
-    .send("service_1sebw7w", "template_a9bfuuw", prams)
-    .then(function (res) {
-      showAlert("success");
-    })
-    .catch(function (err) {
-      showAlert("error");
-    });
+    showAlert("success");
+    return true;
+
+
+  } catch (err) {
+    showAlert("error");
+    return false;
+  }
 }
 
 function showAlert(type) {

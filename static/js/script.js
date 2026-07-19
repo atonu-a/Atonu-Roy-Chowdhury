@@ -10,7 +10,6 @@ if (visit) {
   });
 }
 
-
 function scrollToProject(slug) {
   if (!slug) return;
 
@@ -44,11 +43,30 @@ const cursor = Cursorly.init({
 });
 
 // Mail submit button
-let submit = document.querySelector("#submit");
+const submit = document.querySelector("#submit");
 if (submit) {
-  submit.addEventListener("click", (e) => {
+  submit.addEventListener("click", async (e) => {
     e.preventDefault();
-    sendMail();
+
+    submit.disabled = true;
+    submit.innerHTML = `<span class="loading loading-spinner loading-xs"></span> Sending...`;
+    console.log(submit.innerHTML);
+
+    const success = await sendMail();
+    if (success) {
+      submit.innerHTML = `<i class="fa-solid fa-envelope-circle-check"></i> Sent`;
+      console.log(submit.innerHTML);
+
+      setTimeout(() => {
+        submit.disabled = false;
+        submit.innerHTML = '<i class="fa-solid fa-envelope"></i> Resend';
+      }, 3000);
+      console.log(submit.innerHTML);
+    } else {
+      submit.disabled = false;
+      submit.innerHTML = `<i class="fa-solid fa-envelope"></i> Resend`;
+    }
+    console.log(submit.innerHTML);
   });
 }
 
@@ -66,7 +84,6 @@ function filterProjects(category) {
 
   // Fade out
   container.style.opacity = "0.3";
-
 
   subloader.classList.remove("hidden");
   subloader.classList.add("flex");
