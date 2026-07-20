@@ -134,14 +134,14 @@ body {
   box-shadow: 0 24px 48px -28px rgba(34, 226, 255, 0.35);
 }
 .project .img-frame {
-   @apply lg:w-100 w-full h-75 rounded-[20px] text-center flex justify-center items-center cursor-pointer duration-500  mx-auto;
+  @apply lg:w-100 w-full h-75 rounded-[20px] text-center flex justify-center items-center cursor-pointer duration-500  mx-auto;
   border: 1px solid var(--line);
 }
 .img-frame img {
   @apply border-[3px] border-black rounded-[20px];
 }
 .project .desc {
-  @apply lg:w-[66%]  flex flex-col gap-3 items-start text-left ;
+  @apply lg:w-[66%]  flex flex-col gap-3 items-start text-left;
 }
 .project .desc h4 {
   @apply lg:text-[32px] text-[24px] font-bold;
@@ -507,6 +507,7 @@ section {
   animation: blink 1.1s step-end infinite;
 }
 
+
 .hero-title {
   @apply font-extrabold tracking-[-0.01em];
   font-family: var(--sans);
@@ -514,7 +515,7 @@ section {
   line-height: 1.08;
   color: var(--text);
 }
-.hero-title-name{
+.hero-title-name {
   @apply font-extrabold tracking-[-0.01em];
   font-family: var(--sans);
   font-size: clamp(22px, 5.4vw, 40px);
@@ -552,7 +553,7 @@ section {
 }
 
 .cta-ghost {
-  @apply font-bold text-[14px] rounded-full px-[30px] py-[13px] cursor-pointer bg-transparent;
+  @apply font-bold text-[14px] rounded-full px-[30px] py-[13px] cursor-pointer bg-white/5;
   font-family: var(--sans);
   color: var(--text);
   border: 1px solid var(--line);
@@ -622,7 +623,7 @@ section {
   color: var(--muted);
 }
 .skill-grid {
-  @apply  grid gap-[14px] w-full;
+  @apply grid gap-[14px] w-full;
   grid-template-columns: repeat(auto-fill, minmax(108px, 1fr));
 }
 .skill-card {
@@ -685,9 +686,6 @@ footer {
   }
 }
 
-
-
-
 /* ---- category filter nav (projects/archive page) ---- */
 .filter-btn {
   @apply text-[13px] px-5 py-2.5 rounded-full cursor-pointer transition-all duration-[250ms] whitespace-nowrap border border-transparent;
@@ -716,7 +714,6 @@ footer {
 /* ---- subloader (page-transition spinner on the archive page) ---- */
 .subloader {
   @apply fixed inset-0 z-100 flex-col items-center justify-center gap-3;
-
 }
 .subloader .loading {
   color: var(--signal);

@@ -72,14 +72,14 @@
 
 
 
-    <img id="msg" class="msg fixed bottom-20 right-0 " src="{% static 'assets/message.png' %}" alt="">
+    <img id="msg" class="msg fixed bottom-20 right-0 z-[50]" src="{% static 'assets/message.png' %}" alt="">
 
 
     {% block main %}
     <!-- Navbar starts -->
     <div class="navbar sticky top-0 z-100">
         <div class="nav-inner">
-            <div class="nav-logo" onclick="window.location.href=`{% url 'home' %}`"><span class="dot"></span>atonu<span
+            <div class="nav-logo" onclick="window.location.href=`{% url 'home' %}`"><span class="dot blink"></span>atonu<span
                     class="text-[#8291a3]">.dev</span></div>
 
             <!-- Desktop menu -->
