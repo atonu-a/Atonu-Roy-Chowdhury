@@ -26,7 +26,7 @@ let cvBtn = document.querySelector("#button");
 if (cvBtn) {
   cvBtn.addEventListener("click", () => {
     window.location.href =
-      "https://drive.google.com/file/d/1QKHhg9H13s0YA6yXUmiilMmJdzzYgAz-/view?usp=drive_link";
+      "https://drive.google.com/file/d/1Vba7Ycs8WedZ5iMN_s4rXzyW-9ljuBDn/view?usp=drive_link";
   });
 }
 
