@@ -1,0 +1,1485 @@
+[
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$6LLgQo6XCNNqJ41sinfUwd$ylB9Qvd0BK39+pmP8zjZuuCZhFvjwkfehWnONN8qy6E=",
+        "last_login": "2026-06-30T14:55:48.244Z",
+        "is_superuser": true,
+        "username": "atonuroychowdhury",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-06-17T06:22:51.392Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "11pwr77l2pcokuczu15vkinetdb4z0ig",
+    "fields": {
+        "session_data": ".eJxVjDkOwjAQAP-yNbKyjuMjJT1viNa7Ng4gW8pRIf6OIqWAdmY0b5ho38q0r2mZZoEREC6_LBI_Uz2EPKjem-JWt2WO6kjUaVd1a5Je17P9GxRaC4xAwpilZ2cch6S9x5AJMyFnb2yIVmRg11kZSDoOJmDsvaDVwhqNQ_h8AQZmODY:1weZsK:fJxxZBYfP-qrWW0Bf_k2XbqDV7kiE3qLktwjclixD90",
+        "expire_date": "2026-07-14T14:55:48.248Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "2x8epgj5h9nanv0j18nl47f8q64bwa5o",
+    "fields": {
+        "session_data": ".eJxVjDkOwjAQAP-yNbKyjuMjJT1viNa7Ng4gW8pRIf6OIqWAdmY0b5ho38q0r2mZZoEREC6_LBI_Uz2EPKjem-JWt2WO6kjUaVd1a5Je17P9GxRaC4xAwpilZ2cch6S9x5AJMyFnb2yIVmRg11kZSDoOJmDsvaDVwhqNQ_h8AQZmODY:1waZXC:AsC13-ruupKXoIiMeelmq-b21MwD2dZNMpk6pyRBGtE",
+        "expire_date": "2026-07-03T13:45:26.039Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "54jdw2z5ze2zfib5ycmicn7dv32qn3id",
+    "fields": {
+        "session_data": ".eJxVjDkOwjAQAP-yNbKyjuMjJT1viNa7Ng4gW8pRIf6OIqWAdmY0b5ho38q0r2mZZoEREC6_LBI_Uz2EPKjem-JWt2WO6kjUaVd1a5Je17P9GxRaC4xAwpilZ2cch6S9x5AJMyFnb2yIVmRg11kZSDoOJmDsvaDVwhqNQ_h8AQZmODY:1wZjge:_-zogIEqA4xKpf5QMinsW5RjuFWUaJFzjXIOfnYhJkw",
+        "expire_date": "2026-07-01T06:23:44.233Z"
+    }
+},
+{
+    "model": "home.skills",
+    "pk": 5,
+    "fields": {
+        "skill_title": "HTML",
+        "image": "images/html.png"
+    }
+},
+{
+    "model": "home.skills",
+    "pk": 6,
+    "fields": {
+        "skill_title": "CSS",
+        "image": "images/css.png"
+    }
+},
+{
+    "model": "home.skills",
+    "pk": 7,
+    "fields": {
+        "skill_title": "Javascript",
+        "image": "images/js.png"
+    }
+},
+{
+    "model": "home.skills",
+    "pk": 8,
+    "fields": {
+        "skill_title": "Python",
+        "image": "images/python.png"
+    }
+},
+{
+    "model": "home.skills",
+    "pk": 9,
+    "fields": {
+        "skill_title": "TailwindCSS",
+        "image": "images/tailwind-icon.png"
+    }
+},
+{
+    "model": "home.skills",
+    "pk": 10,
+    "fields": {
+        "skill_title": "Java",
+        "image": "images/java.png"
+    }
+},
+{
+    "model": "home.skills",
+    "pk": 11,
+    "fields": {
+        "skill_title": "Django",
+        "image": "images/pngwing.com.png"
+    }
+},
+{
+    "model": "home.category",
+    "pk": 1,
+    "fields": {
+        "name": "API Projects",
+        "slug": "api-projects"
+    }
+},
+{
+    "model": "home.category",
+    "pk": 2,
+    "fields": {
+        "name": "Full-Stack Projects",
+        "slug": "full-stack-projects"
+    }
+},
+{
+    "model": "home.category",
+    "pk": 3,
+    "fields": {
+        "name": "Games",
+        "slug": "games"
+    }
+},
+{
+    "model": "home.category",
+    "pk": 4,
+    "fields": {
+        "name": "Landing Pages",
+        "slug": "landing-pages"
+    }
+},
+{
+    "model": "home.projects",
+    "pk": 4,
+    "fields": {
+        "category": 4,
+        "image": "images/WhatsApp_Image_2026-06-19_at_10.28.03_PM.jpeg",
+        "image_bg": "[#5E1EB2]",
+        "project_title": "Travelo",
+        "working_date": "October 2025",
+        "desc": "A responsive and modern landing page for a travel agency, Travelo, designed to showcase services, top destinations in Asia, customer reviews, and contact information. The layout is fully responsive, ensuring a great experience on desktops, tablets, and mobile devices.",
+        "link": "https://travelo-49wj.onrender.com/",
+        "github": "https://github.com/atonu-a/Travelo.io",
+        "skills": [
+            5,
+            6,
+            7,
+            9
+        ]
+    }
+},
+{
+    "model": "home.projects",
+    "pk": 5,
+    "fields": {
+        "category": 4,
+        "image": "images/WhatsApp_Image_2026-06-19_at_10.28.04_PM.jpeg",
+        "image_bg": "[#A1A5AE]",
+        "project_title": "Career.io",
+        "working_date": "November 2025",
+        "desc": "Career.io is a personal portfolio website that serves as an open declaration of my commitment to becoming a skilled developer by 2025. It showcases my inspiration, current learning targets, and development journey.",
+        "link": "https://career-io.onrender.com/",
+        "github": "https://github.com/atonu-a/Career.io",
+        "skills": [
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "home.projects",
+    "pk": 6,
+    "fields": {
+        "category": 4,
+        "image": "images/WhatsApp_Image_2026-06-19_at_10_adc61t0.28.04_PM.jpeg",
+        "image_bg": "[#B1A3A3]",
+        "project_title": "Goods Panda",
+        "working_date": "November 2025",
+        "desc": "A modern and responsive e-commerce landing page built using HTML5 and CSS3. The design highlights featured products, categories, and a newsletter subscription section — perfect for learning front-end fundamentals or showcasing UI/UX skills.",
+        "link": "https://goodspanda.vercel.app/",
+        "github": "https://github.com/atonu-a/Goods-Panda",
+        "skills": [
+            5,
+            6,
+            9
+        ]
+    }
+},
+{
+    "model": "home.projects",
+    "pk": 7,
+    "fields": {
+        "category": 4,
+        "image": "images/WhatsApp_Image_2026-06-19_at_10_gGb9OFL.28.04_PM.jpeg",
+        "image_bg": "[#B2AFA8]",
+        "project_title": "Penguin Fashion",
+        "working_date": "November 2025",
+        "desc": "No Descriptions Available",
+        "link": "https://penguinfashion.vercel.app/",
+        "github": "https://github.com/atonu-a/Penguin-Fashion",
+        "skills": [
+            5,
+            6,
+            9
+        ]
+    }
+},
+{
+    "model": "home.projects",
+    "pk": 8,
+    "fields": {
+        "category": 3,
+        "image": "images/WhatsApp_Image_2026-06-19_at_10_Z7SiUOI.28.04_PM.jpeg",
+        "image_bg": "[#B2B2B2]",
+        "project_title": "Tic Tac Toe",
+        "working_date": "February 2026",
+        "desc": "This project is a modern take on Tic-Tac-Toe, built using vanilla web technologies (HTML/CSS/JS). I focused on ensuring the win-condition logic is efficient and that the game state handles edge cases like draws and mid-game resets gracefully. Deployed via Render for instant performance.",
+        "link": "https://tic-tac-toe-69vt.onrender.com/",
+        "github": "https://github.com/atonu-a/tic-tac-toe",
+        "skills": [
+            5,
+            6,
+            7,
+            9
+        ]
+    }
+},
+{
+    "model": "home.projects",
+    "pk": 9,
+    "fields": {
+        "category": 3,
+        "image": "images/WhatsApp_Image_2026-06-19_at_10.28.05_PM.jpeg",
+        "image_bg": "[#061322]",
+        "project_title": "Rock paper Scissors",
+        "working_date": "February 2026",
+        "desc": "I decided to build a \"lite\" version of Rock-Paper-Scissors to sharpen my frontend skills. No fluff, just a fast and intuitive interface where you can test your luck against the computer. It’s fully responsive, so it works just as well on your phone as it does on a desktop.",
+        "link": "https://rock-paper-scissors-lite.vercel.app/",
+        "github": "https://github.com/atonu-a/Rock-Paper-Scissors",
+        "skills": [
+            5,
+            6,
+            7,
+            9
+        ]
+    }
+},
+{
+    "model": "home.projects",
+    "pk": 10,
+    "fields": {
+        "category": 1,
+        "image": "images/WhatsApp_Image_2026-06-19_at_10_ygbdXXi.28.05_PM.jpeg",
+        "image_bg": "[#1C222D]",
+        "project_title": "Climzo",
+        "working_date": "February 2026",
+        "desc": "Climzo is a modern weather forecast app that lets users check real-time temperature, weather conditions, and sunrise or sunset times for any city. Built with Tailwind CSS and JavaScript, it provides a visually appealing, responsive interface with accurate and easy-to-read information.",
+        "link": "https://climzo.vercel.app/",
+        "github": "https://github.com/atonu-a/climzo",
+        "skills": [
+            5,
+            6,
+            7,
+            9
+        ]
+    }
+},
+{
+    "model": "home.projects",
+    "pk": 11,
+    "fields": {
+        "category": 1,
+        "image": "images/WhatsApp_Image_2026-06-19_at_10_YRieOdU.28.05_PM.jpeg",
+        "image_bg": "[#B2B2B2]",
+        "project_title": "EZ News",
+        "working_date": "February 2026",
+        "desc": "This News App fetches the latest articles from various categories like sports, finance, and education, allowing users to search and explore trending topics easily. Built with modern JavaScript and Tailwind CSS, it delivers a responsive and interactive reading experience across devices.",
+        "link": "https://ez-news-ten.vercel.app/",
+        "github": "https://github.com/atonu-a/ez-news",
+        "skills": [
+            5,
+            6,
+            7,
+            9
+        ]
+    }
+},
+{
+    "model": "home.projects",
+    "pk": 12,
+    "fields": {
+        "category": 1,
+        "image": "images/WhatsApp_Image_2026-06-19_at_10.28.06_PM.jpeg",
+        "image_bg": "[#14181F]",
+        "project_title": "FxLite - Simple Currency Coverter",
+        "working_date": "February 2026",
+        "desc": "FxLite is a sleek currency converter that lets users quickly convert amounts between different currencies with live exchange rates. Featuring a responsive design with intuitive dropdowns, country flags, and real-time calculations, it ensures an easy and visually appealing experience for global users.",
+        "link": "https://fxlite-currency.vercel.app/",
+        "github": "https://github.com/atonu-a/Fxlite",
+        "skills": [
+            5,
+            6,
+            7,
+            9
+        ]
+    }
+},
+{
+    "model": "home.projects",
+    "pk": 13,
+    "fields": {
+        "category": 2,
+        "image": "images/WhatsApp_Image_2026-06-19_at_10.06.116_PM.jpeg",
+        "image_bg": "[#203656]",
+        "project_title": "Inkwell",
+        "working_date": "April 2026",
+        "desc": "A full-stack blog and magazine web application built with Django. The project features a dynamic navigation system with active state tracking, category-based post filtering, user authentication with login/logout functionality, and a responsive post grid layout with a carousel widget. The frontend is powered by Bootstrap, Slick.js for carousels, and a custom CSS theme, with Django's templating engine handling dynamic content rendering including post listings, category navigation, and user profile management.",
+        "link": "https://www.inkwell.pro.bd/",
+        "github": "https://github.com/atonu-a/inkwell",
+        "skills": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            11
+        ]
+    }
+},
+{
+    "model": "home.projects",
+    "pk": 14,
+    "fields": {
+        "category": 2,
+        "image": "images/WhatsApp_Image_2026-06-19_at_10_92L78Ca.06.16_PM.jpeg",
+        "image_bg": "[#82A0FF]",
+        "project_title": "Twos",
+        "working_date": "May 2026",
+        "desc": "Twos is a robust web-based task management application developed using the Python/Django stack and styled with DaisyUI. It provides a seamless user experience with real-time feedback alerts, full database environment parity using cloud-hosted Supabase PostgreSQL, and serverless compatibility for smooth deployment on modern hosting platforms.",
+        "link": "https://twos-liby.onrender.com/",
+        "github": "https://github.com/atonu-a/Twos",
+        "skills": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            11
+        ]
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2026-06-17T06:25:52.029Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "skills"
+        ],
+        "object_id": "1",
+        "object_repr": "Skills object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2026-06-17T06:26:11.132Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "skills"
+        ],
+        "object_id": "2",
+        "object_repr": "Skills object (2)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2026-06-17T06:26:31.245Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "skills"
+        ],
+        "object_id": "3",
+        "object_repr": "Skills object (3)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2026-06-17T06:26:43.435Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "skills"
+        ],
+        "object_id": "4",
+        "object_repr": "Skills object (4)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2026-06-17T06:46:21.494Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "skills"
+        ],
+        "object_id": "4",
+        "object_repr": "Skills object (4)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2026-06-17T06:46:21.494Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "skills"
+        ],
+        "object_id": "3",
+        "object_repr": "Skills object (3)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2026-06-17T06:46:21.495Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "skills"
+        ],
+        "object_id": "2",
+        "object_repr": "Skills object (2)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2026-06-17T06:46:21.495Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "skills"
+        ],
+        "object_id": "1",
+        "object_repr": "Skills object (1)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2026-06-17T06:46:33.314Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "skills"
+        ],
+        "object_id": "5",
+        "object_repr": "Skills object (5)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2026-06-17T06:47:41.637Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "skills"
+        ],
+        "object_id": "6",
+        "object_repr": "Skills object (6)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2026-06-17T06:47:52.911Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "skills"
+        ],
+        "object_id": "7",
+        "object_repr": "Skills object (7)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2026-06-17T06:48:09.550Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "skills"
+        ],
+        "object_id": "8",
+        "object_repr": "Skills object (8)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2026-06-17T06:48:28.553Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "skills"
+        ],
+        "object_id": "9",
+        "object_repr": "Skills object (9)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2026-06-17T06:55:16.855Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "skills"
+        ],
+        "object_id": "10",
+        "object_repr": "Skills object (10)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2026-06-17T06:58:16.558Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "skills"
+        ],
+        "object_id": "11",
+        "object_repr": "Skills object (11)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2026-06-17T11:16:03.963Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "1",
+        "object_repr": "Projects object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2026-06-17T11:21:52.817Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "2",
+        "object_repr": "Projects object (2)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2026-06-19T13:45:42.421Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "API Projects",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2026-06-19T14:18:26.452Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "category"
+        ],
+        "object_id": "2",
+        "object_repr": "Full-Stack Projects",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2026-06-19T14:18:30.932Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "category"
+        ],
+        "object_id": "3",
+        "object_repr": "Games",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2026-06-19T14:18:38.340Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "category"
+        ],
+        "object_id": "4",
+        "object_repr": "Landing Pages",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2026-06-19T16:09:12.335Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "3",
+        "object_repr": "Projects object (3)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2026-06-19T16:15:33.872Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "3",
+        "object_repr": "Projects object (3)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image bg\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2026-06-19T16:21:43.787Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "3",
+        "object_repr": "Projects object (3)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2026-06-19T16:21:43.787Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "2",
+        "object_repr": "Projects object (2)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2026-06-19T16:21:43.787Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "1",
+        "object_repr": "Projects object (1)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2026-06-19T16:33:57.820Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "4",
+        "object_repr": "Projects object (4)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2026-06-19T16:36:25.535Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "5",
+        "object_repr": "Projects object (5)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2026-06-19T16:39:47.520Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "6",
+        "object_repr": "Projects object (6)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2026-06-19T16:42:13.571Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "7",
+        "object_repr": "Projects object (7)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2026-06-19T16:44:20.167Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "8",
+        "object_repr": "Projects object (8)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2026-06-19T16:45:57.304Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "9",
+        "object_repr": "Projects object (9)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2026-06-19T16:50:04.470Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "10",
+        "object_repr": "Projects object (10)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2026-06-20T12:52:03.728Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "11",
+        "object_repr": "Projects object (11)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2026-06-20T12:53:39.816Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "12",
+        "object_repr": "Projects object (12)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2026-06-20T12:53:56.555Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "10",
+        "object_repr": "Projects object (10)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Desc\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2026-06-20T12:54:12.502Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "11",
+        "object_repr": "Projects object (11)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Desc\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2026-06-20T13:01:06.083Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "13",
+        "object_repr": "Projects object (13)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2026-06-20T13:05:18.281Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "14",
+        "object_repr": "Projects object (14)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2026-06-23T05:45:03.757Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "6",
+        "object_repr": "Projects object (6)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Desc\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2026-06-23T06:58:50.768Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "14",
+        "object_repr": "Projects object (14)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Github\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2026-06-23T07:00:08.050Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "13",
+        "object_repr": "Projects object (13)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Github\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2026-06-23T07:00:40.574Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "12",
+        "object_repr": "Projects object (12)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Github\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2026-06-23T07:01:07.450Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "11",
+        "object_repr": "Projects object (11)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Github\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2026-06-23T07:01:19.858Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "10",
+        "object_repr": "Projects object (10)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Github\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2026-06-23T07:01:39.807Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "9",
+        "object_repr": "Projects object (9)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Github\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2026-06-23T07:01:56.648Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "8",
+        "object_repr": "Projects object (8)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Github\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2026-06-23T07:02:15.042Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "7",
+        "object_repr": "Projects object (7)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Github\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2026-06-23T07:02:33.596Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "6",
+        "object_repr": "Projects object (6)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Github\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2026-06-23T07:02:53.327Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "5",
+        "object_repr": "Projects object (5)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Github\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2026-06-23T07:03:13.564Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "4",
+        "object_repr": "Projects object (4)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Github\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2026-06-30T14:56:34.632Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "14",
+        "object_repr": "Twos",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Skills\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2026-06-30T15:16:58.320Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "13",
+        "object_repr": "Inkwell",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Skills\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2026-06-30T15:17:11.763Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "12",
+        "object_repr": "FxLite - Simple Currency Coverter",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Skills\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2026-06-30T15:17:19.390Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "11",
+        "object_repr": "EZ News",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Skills\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2026-06-30T15:17:27.093Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "10",
+        "object_repr": "Climzo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Skills\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2026-06-30T15:17:36.459Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "9",
+        "object_repr": "Rock paper Scissors",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Skills\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2026-06-30T15:17:47.315Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "8",
+        "object_repr": "Tic Tac Toe",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Skills\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2026-06-30T15:17:56.058Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "7",
+        "object_repr": "Penguin Fashion",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Skills\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2026-06-30T15:18:03.665Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "6",
+        "object_repr": "Goods Panda",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Skills\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2026-06-30T15:18:07.713Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "7",
+        "object_repr": "Penguin Fashion",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2026-06-30T15:18:15.809Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "5",
+        "object_repr": "Career.io",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Skills\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2026-06-30T15:18:22.057Z",
+        "user": [
+            "atonuroychowdhury"
+        ],
+        "content_type": [
+            "home",
+            "projects"
+        ],
+        "object_id": "4",
+        "object_repr": "Travelo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Skills\"]}}]"
+    }
+}
+]
