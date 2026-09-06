@@ -37,10 +37,10 @@ msg.addEventListener("click", () => {
 });
 
 // Custom cursor
-const cursor = Cursorly.init({
+/*const cursor = Cursorly.init({
   cursor: 16,
   effect: { name: "trail", color: "aqua" },
-});
+});*/
 
 // Mail submit button
 const submit = document.querySelector("#submit");
