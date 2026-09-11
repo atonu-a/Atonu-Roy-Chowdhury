@@ -6,7 +6,7 @@ from typing import Iterable
 
 class Skills(models.Model):
     skill_title = models.CharField(max_length=100)
-    image = models.URLField(max_length=500)
+    image = models.URLField(max_length=1000)
     def __str__(self):
         return self.skill_title
 
