@@ -28,7 +28,7 @@ class Projects(models.Model):
     
     # I have to add a project category section here
     category = models.ForeignKey(Category, related_name="project", on_delete=models.CASCADE)
-    image= models.ImageField(upload_to='images/')
+    image= models.URLField()
     image_bg = models.CharField(max_length=100)
     project_title = models.CharField(max_length=255)
     working_date = models.CharField(max_length=100)
