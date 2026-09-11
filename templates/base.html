@@ -194,7 +194,7 @@
         <div class="skill-grid">
             {% for skill in skills %}
             <div class="skill-card" style="--d: {{ forloop.counter0 }}">
-                <div class="skill-icon"><img src="{{ skill.image.url }}" alt="{{ skill.title }}"></div>
+                <div class="skill-icon"><img src="{{ skill.image }}" alt="{{ skill.title }}"></div>
                 <p>{{ skill.title }}</p>
             </div>
             {% endfor %}
